@@ -1,0 +1,32 @@
+Os dados de 299 pacientes foram coletados originalmente em 2015 no Instituto de Cardiologia de Faisalabad e no Allied Hospital, também localizado na mesma cidade. Esses registros tornaram-se amplamente conhecidos na comunidade de ciência de dados após serem disponibilizados em repositórios como o UCI Machine Learning e o Kaggle.
+
+================================================================================================================================================================================
+
+EJECTION FRACTION: A normal left ventricular ejection fraction (LVEF) is typically 50% to 70%.
+Valores abaixo de 40-50% indicam disfunção sistólica significativa.
+
+
+
+SERUIM CREATININE: Adult Males: 0.6 – 1.3 mg/dL
+                  Adult Females: 0.5 – 1.1 mg/dL
+Níveis elevados indicam insuficiência renal, um forte preditor de mortalidade cardíaca.
+
+
+
+SERUM SODIUM: Normal: 135–145 mEq/L (or mmol/L).
+Níveis baixos de sódio em pacientes cardíacos estão ligados a pior prognóstico.
+
+
+PLATELEST: 150k - 450k
+Trombocitopenia (baixa) ou trombocitose (alta) podem indicar complicações sistêmicas.
+
+
+CPK (Creatinine Phosphokinase): <=190
+indica estresse ou lesão no músculo cardíaco/esquelético.
+
+
+ELDERY: 60+
+
+================================================================================================================================================================================
+
+Serum Creatinine e Ejection Fraction são os preditores mais fortes.
