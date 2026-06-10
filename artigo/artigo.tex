@@ -1,0 +1,217 @@
+\documentclass[a4paper,twoside]{article}
+
+\usepackage{epsfig}
+\usepackage{subcaption}
+\usepackage{calc}
+\usepackage{amssymb}
+\usepackage{amstext}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{multicol}
+\usepackage{pslatex}
+\usepackage{apalike}
+\usepackage{booktabs}
+\usepackage[bottom]{footmisc}
+\usepackage{SCITEPRESS}
+
+\begin{document}
+
+\title{Formal Concept Analysis Applied to Mortality Prediction in Heart Failure Patients}
+
+\author{\authorname{[Your Name]\sup{1}}
+\affiliation{\sup{1}[Your University / Department], [City], [Country]}
+\email{[your@email.edu]}
+}
+
+\keywords{Formal Concept Analysis, Heart Failure, Association Rules, Clinical Data Mining, Mortality Prediction.}
+
+\abstract{Heart failure is one of the leading causes of death worldwide, motivating the search for computational approaches capable of identifying clinical risk patterns. This work applies Formal Concept Analysis (FCA) to a dataset of 299 patients collected at the Faisalabad Institute of Cardiology in 2015. Clinical variables were discretized into binary attributes, and two separate formal contexts were constructed — one for deceased patients and one for survivors — enabling comparative analysis via the Stem Base of implications. Rules with a minimum support of 15\% and confidence of 100\% were extracted. The results show that all significant implication rules in the deceased context involve elevated serum creatinine (\textit{high\_serum\_creatinine}) as antecedent and abnormal ejection fraction (\textit{abnormal\_ejection\_fraction}) as consequent, and that these rules are exclusive to the mortality group, not appearing among survivors. The combination of serum creatinine with hyponatremia or advanced age yielded the highest support values, reaching 23\%. These findings are consistent with the literature, confirming that serum creatinine and ejection fraction are the strongest predictors of cardiac death, and demonstrate the effectiveness of FCA as an interpretable knowledge extraction tool in clinical contexts.}
+
+\onecolumn \maketitle \normalsize \setcounter{footnote}{0} \vfill
+
+% =============================================================
+\section{\uppercase{Introduction}}
+\label{sec:introduction}
+% =============================================================
+
+\noindent Heart failure (HF) is a chronic and progressive clinical syndrome in which the heart is unable to pump sufficient blood to meet the body's metabolic demands. It represents one of the main causes of hospitalization and mortality worldwide, constituting a major public health challenge \cite{Chicco2020}.
+
+Clinical risk prediction in HF patients has been extensively studied through machine learning approaches such as decision trees, random forests, and neural networks. However, such methods often produce models that are difficult to interpret, limiting their applicability in clinical settings where transparency and explainability are essential \cite{Ahmad2017}.
+
+Formal Concept Analysis (FCA) \cite{Ganter1999} offers a mathematically grounded alternative for knowledge extraction from binary data. By organizing objects and attributes into a concept lattice, FCA reveals intrinsic structural relationships in the data and generates implication rules with 100\% logical certainty within the analyzed context. This interpretability makes it particularly suited for medical data analysis, where the meaning of each rule must be clearly understood by domain experts.
+
+This paper applies FCA to the Heart Failure Clinical Records dataset \cite{Chicco2020}, originally collected at the Faisalabad Institute of Cardiology (Pakistan) in 2015. Our main contribution is a comparative analysis between formal contexts built separately for deceased and surviving patients, enabling the identification of clinical attribute combinations that are exclusively associated with mortality.
+
+The remainder of this paper is organized as follows. Section~\ref{sec:background} presents the theoretical background on FCA and heart failure indicators. Section~\ref{sec:methodology} describes the dataset, discretization procedure, and analytical methodology. Section~\ref{sec:results} presents and discusses the results. Section~\ref{sec:conclusion} concludes the paper.
+
+% =============================================================
+\section{\uppercase{Background}}
+\label{sec:background}
+% =============================================================
+
+\subsection{Formal Concept Analysis}
+
+Formal Concept Analysis, introduced by \cite{Ganter1999}, is a mathematical framework rooted in lattice theory that structures binary data into \textit{formal concepts} — pairs $(A, B)$ where $A$ is a set of objects (extent) and $B$ is a set of attributes (intent) such that every object in $A$ shares all attributes in $B$ and vice versa.
+
+Given a formal context $\mathbb{K} = (G, M, I)$, where $G$ is a set of objects, $M$ a set of attributes, and $I \subseteq G \times M$ the incidence relation, the set of all formal concepts ordered by set inclusion forms a complete lattice known as the \textit{concept lattice}.
+
+An \textit{implication} $A \rightarrow B$ (with $A, B \subseteq M$) holds in a context if every object possessing all attributes in $A$ also possesses all attributes in $B$. The \textit{Stem Base} (or Duquenne–Guigues basis) \cite{Ganter1999} is the minimal, non-redundant set of implications from which all valid implications can be derived, making it the canonical representation of the context's knowledge.
+
+In this work, implications are further characterized by \textit{support}, defined as the proportion of objects in the context satisfying the antecedent $A$, following the convention adopted by the Lattice Miner tool \cite{Missaoui2017}.
+
+\subsection{Clinical Indicators of Heart Failure Mortality}
+
+The Heart Failure Clinical Records dataset contains 13 clinical features. Based on the literature \cite{Chicco2020, Ahmad2017}, the two strongest mortality predictors are:
+
+\begin{itemize}
+    \item \textbf{Serum creatinine}: elevated levels ($> 1.2$ mg/dL) indicate renal insufficiency, which is strongly associated with cardiac mortality.
+    \item \textbf{Ejection fraction}: values outside the normal range (50--70\%) indicate systolic dysfunction, a direct marker of heart failure severity.
+\end{itemize}
+
+Additional clinical risk factors include hyponatremia (low serum sodium, $< 135$ mEq/L), advanced age ($\geq 60$ years), anemia, and high blood pressure \cite{Chicco2020}.
+
+% =============================================================
+\section{\uppercase{Methodology}}
+\label{sec:methodology}
+% =============================================================
+
+\subsection{Dataset}
+
+The Heart Failure Clinical Records dataset \cite{Chicco2020} comprises records of 299 patients collected at the Faisalabad Institute of Cardiology and Allied Hospital (Pakistan) in 2015. The dataset is publicly available at the UCI Machine Learning Repository. Each record contains 13 clinical features and a binary target variable (\textit{DEATH\_EVENT}).
+
+Of the 299 patients, 96 (32.1\%) died during the follow-up period and 203 (67.9\%) survived.
+
+\subsection{Discretization}
+
+FCA requires binary (Boolean) data. Continuous variables were discretized into binary attributes according to established clinical thresholds, as described in Table~\ref{tab:discretization}. The \textit{time} variable (follow-up duration) was excluded, as it is not a clinical predictor but rather a study artifact. Sex was split into two complementary binary attributes (\textit{masculine}, \textit{feminine}).
+
+\begin{table}[h]
+\caption{Discretization criteria for continuous variables.}
+\label{tab:discretization}
+\centering
+\small
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Original Variable} & \textbf{Binary Attribute} & \textbf{Threshold} \\
+\hline
+age & elderly & $\geq 60$ years \\
+creatinine\_phosphokinase & high\_cpk & $> 190$ U/L \\
+ejection\_fraction & abnormal\_ejection\_fraction & $< 50$ or $> 70$\% \\
+platelets & abnormal\_platelets & $< 150{,}000$ or $> 450{,}000$ \\
+serum\_creatinine & high\_serum\_creatinine & $> 1.2$ mg/dL \\
+serum\_sodium & low\_serum\_sodium & $< 135$ mEq/L \\
+\hline
+\end{tabular}
+\end{table}
+
+Binary variables (anaemia, diabetes, high\_blood\_pressure, smoking) were kept as-is. The resulting dataset contains 13 binary attributes per patient.
+
+\subsection{Formal Context Construction}
+
+Instead of using a single context with all 299 patients, we constructed two separate formal contexts:
+
+\begin{itemize}
+    \item $\mathbb{K}_{death}$: 96 patients with \textit{DEATH\_EVENT} = 1.
+    \item $\mathbb{K}_{surv}$: 203 patients with \textit{DEATH\_EVENT} = 0.
+\end{itemize}
+
+This separation enables a direct comparative analysis: implication rules exclusive to $\mathbb{K}_{death}$ reveal attribute co-occurrences characteristic of mortality, while rules shared by both contexts indicate non-discriminative patterns.
+
+\subsection{Rule Extraction}
+
+Implication rules were extracted using the Lattice Miner tool \cite{Missaoui2017} via the Stem Base algorithm. A minimum support threshold of 15\% was adopted, corresponding to approximately 14 patients in $\mathbb{K}_{death}$ — a threshold considered appropriate for small medical datasets \cite{Agrawal1994}. All extracted rules have confidence of 100\% by definition of the Stem Base.
+
+% =============================================================
+\section{\uppercase{Results and Discussion}}
+\label{sec:results}
+% =============================================================
+
+\subsection{Descriptive Statistics}
+
+Table~\ref{tab:prevalence} shows the prevalence of each binary attribute in the deceased and surviving groups. The most notable differences are observed for \textit{high\_serum\_creatinine} ($+33.1$ percentage points between deceased and survivors), \textit{low\_serum\_sodium} ($+23.6$ pp), and \textit{elderly} ($+16.0$ pp). Conversely, \textit{smoking}, \textit{high\_cpk}, \textit{diabetes}, and \textit{sex} showed virtually no difference between groups, suggesting limited discriminative power for mortality prediction.
+
+\begin{table}[h]
+\caption{Attribute prevalence in deceased and surviving groups.}
+\label{tab:prevalence}
+\centering
+\small
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Attribute} & \textbf{All} & \textbf{Deceased} & \textbf{Survivors} \\
+\hline
+elderly                       & 56.9\% & 67.7\% & 51.7\% \\
+high\_serum\_creatinine        & 33.8\% & 56.2\% & 23.2\% \\
+low\_serum\_sodium             & 27.8\% & 43.8\% & 20.2\% \\
+abnormal\_ejection\_fraction   & 80.3\% & 85.4\% & 77.8\% \\
+high\_blood\_pressure          & 35.1\% & 40.6\% & 32.5\% \\
+anaemia                       & 43.1\% & 47.9\% & 40.9\% \\
+diabetes                      & 41.8\% & 41.7\% & 41.9\% \\
+high\_cpk                     & 58.9\% & 58.3\% & 59.1\% \\
+smoking                       & 32.1\% & 31.2\% & 32.5\% \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Implication Rules}
+
+Table~\ref{tab:rules_mortos} presents the four implication rules with support $\geq 15\%$ extracted from $\mathbb{K}_{death}$. All rules share the same consequent — \textit{abnormal\_ejection\_fraction} — and have confidence of 100\%, meaning that every patient in the deceased group who satisfied the antecedent also had an abnormal ejection fraction.
+
+\begin{table}[h]
+\caption{Implication rules with support $\geq 15\%$ in the deceased context ($\mathbb{K}_{death}$).}
+\label{tab:rules_mortos}
+\centering
+\small
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Antecedent $\rightarrow$ Consequent} & \textbf{Support} \\
+\hline
+\{elderly, high\_serum\_creatinine, & \\
+\quad low\_serum\_sodium\} $\rightarrow$ \{abnormal\_ejection\_fraction\} & 23\% \\
+\{high\_serum\_creatinine, low\_serum\_sodium, & \\
+\quad masculine\} $\rightarrow$ \{abnormal\_ejection\_fraction\} & 20\% \\
+\{elderly, high\_blood\_pressure, & \\
+\quad high\_serum\_creatinine\} $\rightarrow$ \{abnormal\_ejection\_fraction\} & 16\% \\
+\{high\_blood\_pressure, high\_cpk, & \\
+\quad masculine\} $\rightarrow$ \{abnormal\_ejection\_fraction\} & 15\% \\
+\hline
+\end{tabular}
+\end{table}
+
+In contrast, the three rules extracted from the surviving context ($\mathbb{K}_{surv}$) with support $\geq 15\%$ involve only demographic attributes (\textit{masculine}) as consequents, with antecedents combining \textit{abnormal\_ejection\_fraction} and \textit{high\_cpk} with \textit{smoking}. No clinically critical risk pattern was identified among survivors at this support level.
+
+\subsection{Comparative Analysis}
+
+All four rules from Table~\ref{tab:rules_mortos} are \textbf{exclusive to the deceased context} — none of them appears in the surviving context. This exclusivity is the central finding of this work: the co-occurrence of \textit{high\_serum\_creatinine} with other risk factors (hyponatremia, advanced age, or high blood pressure) defines a clinical profile that is exclusively associated with mortality in this dataset.
+
+The most supported rule, \{elderly, high\_serum\_creatinine, low\_serum\_sodium\} $\rightarrow$ \{abnormal\_ejection\_fraction\} (support 23\%, confidence 100\%), means that among deceased patients, every elderly patient with elevated creatinine and low sodium necessarily also presented an abnormal ejection fraction. This triple combination represents a multi-organ failure profile consistent with end-stage heart failure \cite{Ahmad2017}.
+
+The role of \textit{high\_serum\_creatinine} is especially noteworthy: it appears in three of the four rules as an antecedent. This is consistent with the cardio-renal syndrome, in which cardiac dysfunction leads to reduced renal perfusion, elevating creatinine and further worsening cardiac function \cite{Chicco2020}.
+
+The fourth rule, \{high\_blood\_pressure, high\_cpk, masculine\} $\rightarrow$ \{abnormal\_ejection\_fraction\} (support 15\%), reveals a distinct risk profile involving hypertension and muscle/cardiac stress markers in male patients, without the renal dysfunction component, suggesting a potentially different pathophysiological pathway to cardiac death.
+
+\subsection{Comparison with Related Work}
+
+\cite{Chicco2020} identified serum creatinine and ejection fraction as the two most important predictors of HF mortality using survival analysis and machine learning. Our FCA-based approach confirms this finding through a fundamentally different methodology: rather than ranking individual variables by predictive power, FCA reveals the \textit{joint} attribute combinations that characterize the deceased group with logical certainty. The exclusive rules found in $\mathbb{K}_{death}$ go beyond individual predictor importance by identifying synergistic clinical profiles.
+
+% =============================================================
+\section{\uppercase{Conclusions}}
+\label{sec:conclusion}
+% =============================================================
+
+\noindent This work demonstrated the applicability of Formal Concept Analysis for mortality pattern identification in heart failure patients. By constructing separate formal contexts for deceased and surviving patients and applying the Stem Base algorithm with 15\% minimum support, we identified four implication rules exclusive to the deceased group, all with 100\% confidence.
+
+The central finding is that \textit{high\_serum\_creatinine} appears as an antecedent in three of the four significant rules, always implying \textit{abnormal\_ejection\_fraction}. The combination of elevated creatinine with hyponatremia or advanced age (support 20--23\%) represents the most critical clinical profile associated with mortality, consistent with the cardio-renal syndrome described in the literature.
+
+FCA proved to be an effective and interpretable tool for this type of analysis. Unlike black-box machine learning models, implication rules are logically certain within their context and directly readable by clinicians. The comparative two-context methodology proposed here can be generalized to other binary classification problems in medical data.
+
+As future work, we intend to explore the full concept lattice structure to identify hierarchical relationships between risk profiles, apply the methodology to larger and more diverse HF cohorts, and investigate the integration of FCA with supervised classification methods.
+
+\section*{\uppercase{Acknowledgements}}
+
+The authors thank [institution/advisor name] for support during the development of this work.
+
+\bibliographystyle{apalike}
+{\small
+\bibliography{referencias}}
+
+\end{document}
