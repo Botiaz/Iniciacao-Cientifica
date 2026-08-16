@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConceptualSystem>
+  <Version MajorNumber="1" MinorNumber="0"/>
+  <Contexts>
+    <Context Identifier="0" Type="Binary">
+      <Attributes>
+        <Attribute Identifier="0">
+          <Name>elderly</Name>
+        </Attribute>
+        <Attribute Identifier="1">
+          <Name>anaemia</Name>
+        </Attribute>
+        <Attribute Identifier="2">
+          <Name>high_cpk</Name>
+        </Attribute>
+        <Attribute Identifier="3">
+          <Name>diabetes</Name>
+        </Attribute>
+        <Attribute Identifier="4">
+          <Name>abnormal_ejection_fraction</Name>
+        </Attribute>
+        <Attribute Identifier="5">
+          <Name>high_blood_pressure</Name>
+        </Attribute>
+        <Attribute Identifier="6">
+          <Name>abnormal_platelets</Name>
+        </Attribute>
+        <Attribute Identifier="7">
+          <Name>high_serum_creatinine</Name>
+        </Attribute>
+        <Attribute Identifier="8">
+          <Name>low_serum_sodium</Name>
+        </Attribute>
+        <Attribute Identifier="9">
+          <Name>smoking</Name>
+        </Attribute>
+        <Attribute Identifier="10">
+          <Name>masculine</Name>
+        </Attribute>
+        <Attribute Identifier="11">
+          <Name>feminine</Name>
+        </Attribute>
+      </Attributes>
+      <Objects>
+        <Object>
+          <Name>P0</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P1</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P2</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P3</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P4</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P5</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P6</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P7</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P8</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P9</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P10</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P11</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P12</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P13</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P14</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P15</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P16</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P17</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P18</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P19</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P20</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P21</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P22</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P23</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P24</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P25</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P26</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P27</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P28</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P29</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P30</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P31</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P32</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P33</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P34</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P35</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P36</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P37</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P38</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P39</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P40</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P41</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P42</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P43</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P44</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P45</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P46</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P47</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P48</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P49</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P50</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P51</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P52</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P53</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P54</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P55</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P56</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P57</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P58</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P59</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P60</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P61</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P62</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P63</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P64</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P65</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P66</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P67</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P68</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P69</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P70</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P71</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P72</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P73</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P74</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P75</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P76</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P77</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P78</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P79</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P80</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P81</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P82</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P83</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P84</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P85</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P86</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P87</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P88</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P89</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P90</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="5"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P91</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P92</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="6"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="11"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P93</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P94</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="0"/>
+            <HasAttribute AttributeIdentifier="1"/>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="3"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+        <Object>
+          <Name>P95</Name>
+          <Intent>
+            <HasAttribute AttributeIdentifier="2"/>
+            <HasAttribute AttributeIdentifier="4"/>
+            <HasAttribute AttributeIdentifier="7"/>
+            <HasAttribute AttributeIdentifier="8"/>
+            <HasAttribute AttributeIdentifier="9"/>
+            <HasAttribute AttributeIdentifier="10"/>
+          </Intent>
+        </Object>
+      </Objects>
+    </Context>
+  </Contexts>
+</ConceptualSystem>
