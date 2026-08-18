@@ -58,7 +58,7 @@
     <rule>
       <premise>{abnormal_ejection_fraction, smoking}</premise>
       <consequence>{masculine}</consequence>
-      <support>0.26</support>
+      <support>0.28</support>
       <confidence>1.0</confidence>
     </rule>
     <rule>
@@ -82,7 +82,7 @@
     <rule>
       <premise>{abnormal_ejection_fraction}</premise>
       <consequence>{survivor}</consequence>
-      <support>0.77</support>
+      <support>0.85</support>
       <confidence>1.0</confidence>
     </rule>
   </rules>
