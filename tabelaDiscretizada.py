@@ -27,9 +27,9 @@ df_fca['high_cpk'] = df['creatinine_phosphokinase'].apply(lambda x: 1 if x > 120
 # Diabetes (já binário)
 df_fca['diabetes'] = df['diabetes']
 
-# Ejection Fraction (Bom se entre 50 e 70, caso contrário 'abnormal')
-# Fonte: MedlinePlus - LVEF normal = 50-70%
-df_fca['abnormal_ejection_fraction'] = df['ejection_fraction'].apply(lambda x: 0 if 50 <= x <= 70 else 1)
+# Ejection Fraction (Bom se entre 55 e 70, caso contrário 'abnormal')
+# Fonte: Heart.org - LVEF normal = 55-70%
+df_fca['abnormal_ejection_fraction'] = df['ejection_fraction'].apply(lambda x: 0 if 55 <= x <= 70 else 1)
 
 # High Blood Pressure (já binário)
 df_fca['high_blood_pressure'] = df['high_blood_pressure']
