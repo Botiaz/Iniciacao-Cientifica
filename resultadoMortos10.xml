@@ -6,7 +6,7 @@
     <minimal_confidence>1.0</minimal_confidence>
   </specs>
   <rules>
-    <rules_number>24</rules_number>
+    <rules_number>23</rules_number>
     <rule>
       <premise>{abnormal_platelets}</premise>
       <consequence>{death}</consequence>
@@ -17,6 +17,12 @@
       <premise>{anaemia}</premise>
       <consequence>{death}</consequence>
       <support>0.47</support>
+      <confidence>1.0</confidence>
+    </rule>
+    <rule>
+      <premise>{high_blood_pressure}</premise>
+      <consequence>{death}</consequence>
+      <support>0.4</support>
       <confidence>1.0</confidence>
     </rule>
     <rule>
@@ -44,21 +50,9 @@
       <confidence>1.0</confidence>
     </rule>
     <rule>
-      <premise>{abnormal_ejection_fraction, diabetes, high_blood_pressure}</premise>
-      <consequence>{high_cpk}</consequence>
-      <support>0.14</support>
-      <confidence>1.0</confidence>
-    </rule>
-    <rule>
-      <premise>{high_blood_pressure}</premise>
+      <premise>{low_serum_sodium}</premise>
       <consequence>{death}</consequence>
-      <support>0.4</support>
-      <confidence>1.0</confidence>
-    </rule>
-    <rule>
-      <premise>{abnormal_ejection_fraction, feminine, low_serum_sodium}</premise>
-      <consequence>{high_serum_creatinine}</consequence>
-      <support>0.1</support>
+      <support>0.43</support>
       <confidence>1.0</confidence>
     </rule>
     <rule>
@@ -68,21 +62,9 @@
       <confidence>1.0</confidence>
     </rule>
     <rule>
-      <premise>{elderly, high_blood_pressure, low_serum_sodium}</premise>
-      <consequence>{high_serum_creatinine}</consequence>
-      <support>0.1</support>
-      <confidence>1.0</confidence>
-    </rule>
-    <rule>
-      <premise>{low_serum_sodium}</premise>
-      <consequence>{death}</consequence>
-      <support>0.43</support>
-      <confidence>1.0</confidence>
-    </rule>
-    <rule>
-      <premise>{high_blood_pressure, high_cpk, masculine}</premise>
+      <premise>{high_blood_pressure, masculine}</premise>
       <consequence>{abnormal_ejection_fraction}</consequence>
-      <support>0.18</support>
+      <support>0.22</support>
       <confidence>1.0</confidence>
     </rule>
     <rule>
@@ -104,9 +86,27 @@
       <confidence>1.0</confidence>
     </rule>
     <rule>
-      <premise>{high_blood_pressure, high_cpk, low_serum_sodium}</premise>
+      <premise>{high_blood_pressure, low_serum_sodium}</premise>
       <consequence>{abnormal_ejection_fraction}</consequence>
-      <support>0.11</support>
+      <support>0.15</support>
+      <confidence>1.0</confidence>
+    </rule>
+    <rule>
+      <premise>{diabetes, high_blood_pressure}</premise>
+      <consequence>{abnormal_ejection_fraction}</consequence>
+      <support>0.17</support>
+      <confidence>1.0</confidence>
+    </rule>
+    <rule>
+      <premise>{elderly, high_blood_pressure, low_serum_sodium}</premise>
+      <consequence>{high_serum_creatinine}</consequence>
+      <support>0.1</support>
+      <confidence>1.0</confidence>
+    </rule>
+    <rule>
+      <premise>{elderly, high_blood_pressure}</premise>
+      <consequence>{abnormal_ejection_fraction}</consequence>
+      <support>0.27</support>
       <confidence>1.0</confidence>
     </rule>
     <rule>
@@ -116,15 +116,9 @@
       <confidence>1.0</confidence>
     </rule>
     <rule>
-      <premise>{elderly, high_cpk, high_serum_creatinine, low_serum_sodium}</premise>
+      <premise>{elderly, high_serum_creatinine, low_serum_sodium}</premise>
       <consequence>{abnormal_ejection_fraction}</consequence>
-      <support>0.16</support>
-      <confidence>1.0</confidence>
-    </rule>
-    <rule>
-      <premise>{abnormal_ejection_fraction, anaemia, low_serum_sodium}</premise>
-      <consequence>{high_serum_creatinine}</consequence>
-      <support>0.13</support>
+      <support>0.23</support>
       <confidence>1.0</confidence>
     </rule>
     <rule>
@@ -148,7 +142,7 @@
     <rule>
       <premise>{abnormal_ejection_fraction}</premise>
       <consequence>{death}</consequence>
-      <support>0.85</support>
+      <support>0.91</support>
       <confidence>1.0</confidence>
     </rule>
   </rules>

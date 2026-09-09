@@ -6,13 +6,7 @@
     <minimal_confidence>1.0</minimal_confidence>
   </specs>
   <rules>
-    <rules_number>17</rules_number>
-    <rule>
-      <premise>{abnormal_platelets}</premise>
-      <consequence>{death}</consequence>
-      <support>0.17</support>
-      <confidence>1.0</confidence>
-    </rule>
+    <rules_number>20</rules_number>
     <rule>
       <premise>{anaemia}</premise>
       <consequence>{death}</consequence>
@@ -20,9 +14,15 @@
       <confidence>1.0</confidence>
     </rule>
     <rule>
-      <premise>{diabetes}</premise>
+      <premise>{abnormal_platelets}</premise>
       <consequence>{death}</consequence>
-      <support>0.41</support>
+      <support>0.17</support>
+      <confidence>1.0</confidence>
+    </rule>
+    <rule>
+      <premise>{high_blood_pressure, low_serum_sodium}</premise>
+      <consequence>{abnormal_ejection_fraction}</consequence>
+      <support>0.15</support>
       <confidence>1.0</confidence>
     </rule>
     <rule>
@@ -38,27 +38,33 @@
       <confidence>1.0</confidence>
     </rule>
     <rule>
+      <premise>{diabetes}</premise>
+      <consequence>{death}</consequence>
+      <support>0.41</support>
+      <confidence>1.0</confidence>
+    </rule>
+    <rule>
       <premise>{feminine}</premise>
       <consequence>{death}</consequence>
       <support>0.35</support>
       <confidence>1.0</confidence>
     </rule>
     <rule>
-      <premise>{feminine, high_blood_pressure}</premise>
-      <consequence>{high_serum_creatinine}</consequence>
+      <premise>{high_blood_pressure, masculine}</premise>
+      <consequence>{abnormal_ejection_fraction}</consequence>
+      <support>0.22</support>
+      <confidence>1.0</confidence>
+    </rule>
+    <rule>
+      <premise>{diabetes, high_blood_pressure}</premise>
+      <consequence>{abnormal_ejection_fraction}</consequence>
       <support>0.17</support>
       <confidence>1.0</confidence>
     </rule>
     <rule>
-      <premise>{high_blood_pressure, high_cpk, masculine}</premise>
-      <consequence>{abnormal_ejection_fraction}</consequence>
-      <support>0.18</support>
-      <confidence>1.0</confidence>
-    </rule>
-    <rule>
-      <premise>{smoking}</premise>
+      <premise>{low_serum_sodium}</premise>
       <consequence>{death}</consequence>
-      <support>0.31</support>
+      <support>0.43</support>
       <confidence>1.0</confidence>
     </rule>
     <rule>
@@ -68,9 +74,21 @@
       <confidence>1.0</confidence>
     </rule>
     <rule>
-      <premise>{low_serum_sodium}</premise>
+      <premise>{elderly, high_blood_pressure}</premise>
+      <consequence>{abnormal_ejection_fraction}</consequence>
+      <support>0.27</support>
+      <confidence>1.0</confidence>
+    </rule>
+    <rule>
+      <premise>{feminine, high_blood_pressure}</premise>
+      <consequence>{high_serum_creatinine}</consequence>
+      <support>0.17</support>
+      <confidence>1.0</confidence>
+    </rule>
+    <rule>
+      <premise>{smoking}</premise>
       <consequence>{death}</consequence>
-      <support>0.43</support>
+      <support>0.31</support>
       <confidence>1.0</confidence>
     </rule>
     <rule>
@@ -98,15 +116,15 @@
       <confidence>1.0</confidence>
     </rule>
     <rule>
-      <premise>{elderly, high_cpk, high_serum_creatinine, low_serum_sodium}</premise>
+      <premise>{elderly, high_serum_creatinine, low_serum_sodium}</premise>
       <consequence>{abnormal_ejection_fraction}</consequence>
-      <support>0.16</support>
+      <support>0.23</support>
       <confidence>1.0</confidence>
     </rule>
     <rule>
       <premise>{abnormal_ejection_fraction}</premise>
       <consequence>{death}</consequence>
-      <support>0.85</support>
+      <support>0.91</support>
       <confidence>1.0</confidence>
     </rule>
   </rules>
