@@ -78,11 +78,3 @@ Isso gera o arquivo `heart_failure_fca_ready.csv`, que pode ser importado no [La
 **"Formal Concept Analysis Applied to Mortality Prediction in Heart Failure Patients"**
 Mateus Soares Gatti Vasconcellos, Julio Neves, Luis Zárate, Mark Song — PUC Minas
 
-## 🚧 Status
-
-Projeto em desenvolvimento. Este repositório está sendo atualizado à medida que a pesquisa avança.
-
-## 👤 Autor
-
-**Mateus Soares Gatti Vasconcellos** ([@Botiaz](https://github.com/Botiaz))
-Estudante de Ciência da Computação — PUC Minas
